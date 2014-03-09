@@ -30,18 +30,15 @@ int main()
             sum += (3*numberOfTicks)-1;
 //            cout << sum << endl;
 //            sum += firstNum;
-            cout << sum << endl;
             sum += numberOfTicks;
-            cout << sum << endl;
             if ((firstNum - secondNum) < 0)
-                sum += (firstNum - secondNum)+numberOfTicks;
+                sum += numberOfTicks - ((firstNum - secondNum) + numberOfTicks);
             else
-                sum += (firstNum - secondNum);
-            cout << sum << endl;
+                sum += numberOfTicks - (firstNum - secondNum);
             if ((numberOfTicks - secondNum) - (numberOfTicks - thirdNum) < 0)
-                sum += ((numberOfTicks - secondNum) - (numberOfTicks - thirdNum) + numberOfTicks);
+                sum += numberOfTicks-((numberOfTicks - secondNum) - (numberOfTicks - thirdNum)+numberOfTicks);
             else
-                sum += ((numberOfTicks - secondNum) - (numberOfTicks - thirdNum));
+                sum += numberOfTicks-((numberOfTicks - secondNum) - (numberOfTicks - thirdNum));
         
             cout << "Case #" << count << ": " << sum << endl;
             count++;
